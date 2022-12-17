@@ -1,13 +1,17 @@
-#include "monty.h"
-/**
- * f_stack - prints the top
- * @head: stack head
- * @counter: line_number
- * Return: no return
-*/
-void f_stack(stack_t **head, unsigned int counter)
+#define LIMIT 100
+void display()
 {
-	(void)head;
-	(void)counter;
-	bus.lifi = 0;
+int stack[LIMIT], top, i;
+if(top == -1)
+{
+printf("Stack underflow\n"); // Stack is empty
+}
+else if(top > 0)
+{
+printf("The elements of the stack are:\n");
+for(i = top; i >= 0; i--) // top to bottom traversal
+{
+printf("%d\n",stack[i]);
+}
+}
 }
